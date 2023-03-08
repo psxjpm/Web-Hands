@@ -1,3 +1,16 @@
+// import { Nebula } from '../../primitives';
+// import React from 'react';
+// import { getSrcHref } from '../utils';
+// import init from './init';
+
+// export default () => (
+//   <Nebula
+//     srcHref={getSrcHref('EightDiagrams/init.js')}
+//     init={init}
+//     shouldRotateCamera={true}
+//   />
+// );
+
 const mpHands = window;
 const drawingUtils = window;
 const controls = window;
@@ -64,7 +77,7 @@ hands.onResults(onResults);
 new controls
     .ControlPanel(controlsElement, {
     selfieMode: true,
-    maxNumHands: 2,
+    maxNumHands: 4,
     modelComplexity: 1,
     minDetectionConfidence: 0.5,
     minTrackingConfidence: 0.5
@@ -99,7 +112,7 @@ new controls
     new controls.Slider({
         title: 'Max Number of Hands',
         field: 'maxNumHands',
-        range: [1, 2],
+        range: [1, 4],
         step: 1
     }),
 ])
